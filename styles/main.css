@@ -1,0 +1,750 @@
+body {
+  box-sizing: border-box;
+  width: 100%;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    display: none;
+  }
+}
+header .header-title {
+  position: relative;
+  width: 100%;
+}
+header .header-title .main-photo {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+}
+header .header-title .main-photo-gradient-box {
+  position: absolute;
+  width: 100%;
+  height: 36.408vw;
+  left: 0;
+  bottom: 11.893vw;
+  background: linear-gradient(transparent, #FFFFFF);
+}
+header .header-title .main-photo-solid-box {
+  width: 100%;
+  height: 12.136vw;
+  background: #FFFFFF;
+}
+header .header-title .wedding-title {
+  position: absolute;
+  bottom: 3.641vw;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+header .header-title .wedding-title .wedding-title-subtitle {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 5.2vw;
+  text-align: center;
+  margin-bottom: 1.214vw;
+}
+header .header-title .wedding-title .couple-names {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  color: #553A3A;
+  font-size: 11.3vw;
+  text-align: center;
+}
+header .header-title .wedding-title .ampersand {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  color: #553A3A;
+  font-size: 5.9vw;
+  text-align: center;
+}
+header .header-phrase {
+  width: 73%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  header .header-phrase {
+    display: none;
+  }
+}
+header .header-phrase .phrase-content {
+  font-family: "Cormorant", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 4.2vw;
+  color: #3A3A3A;
+  margin: 4.854vw 0;
+  line-height: 5.583vw;
+}
+header .header-phrase .phrase-autor {
+  font-family: "Great Vibes", serif;
+  font-size: 5.75vw;
+  color: #3A3A3A;
+  margin: 2.4vw 0 7.2vw 0;
+}
+header hr {
+  border: none;
+  width: 50%;
+  height: 1.4px;
+  background-color: #B4B4B4;
+  box-shadow: none;
+}
+@media screen and (min-width: 769px) {
+  header hr {
+    display: none;
+  }
+}
+
+main .desktop-view {
+  background-color: #ddd0cd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+@media screen and (max-width: 768px) {
+  main .desktop-view {
+    display: none;
+  }
+}
+main .desktop-view .wedding-title-desktop {
+  text-align: center;
+  color: #FFFFFF;
+}
+main .desktop-view .wedding-title-desktop .wedding-title-subtitle {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 1vw;
+}
+main .desktop-view .wedding-title-desktop .couple-names {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  color: #553A3A;
+  font-size: 5vw;
+  text-align: center;
+}
+main .desktop-view .wedding-title-desktop .ampersand {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  color: #553A3A;
+  font-size: 2vw;
+  text-align: center;
+}
+main .desktop-view .movil-instruction p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: clamp(1rem, 1.6vw, 1.7rem);
+  text-align: center;
+}
+main .desktop-view .qr-movil-link div {
+  width: clamp(6rem, 10vw, 12rem);
+  height: clamp(6rem, 10vw, 12rem);
+  background: #3A3A3A;
+}
+main .main-parents {
+  width: 73%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 9.7vw;
+  margin-bottom: 9.7vw;
+}
+@media screen and (min-width: 769px) {
+  main .main-parents {
+    display: none;
+  }
+}
+main .main-parents h2 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 6.2vw;
+  text-align: center;
+  line-height: 4.854vw;
+}
+main .main-parents .main-parents-content {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: #3A3A3A;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.583vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 6.796vw;
+}
+main .main-date-countdown {
+  width: 100%;
+  background: linear-gradient(45deg, #876E67, #44322C);
+  box-shadow: inset -3.155vw 5.825vw 3.155vw -4.126vw rgba(32, 21, 21, 0.55);
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6vw;
+}
+@media screen and (min-width: 769px) {
+  main .main-date-countdown {
+    display: none;
+  }
+}
+main .main-date-countdown .date-container {
+  width: 73%;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.34vw;
+}
+main .main-date-countdown .date-container .wedding-date {
+  font-family: "Cormorant SC", serif;
+  font-size: 7.2vw;
+  line-height: 7.282vw;
+}
+main .main-date-countdown .countdown-title {
+  width: 73%;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.34vw;
+}
+main .main-date-countdown .countdown-title.finish {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 7vw;
+  line-height: 4vw;
+  padding-bottom: 1vw;
+}
+main .main-date-countdown .countdown-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3.398vw;
+}
+main .main-date-countdown .countdown-container .countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+  gap: 3.641vw;
+  border-right: 2px solid #B4B4B4;
+  padding-right: 3.641vw;
+}
+main .main-date-countdown .countdown-container .countdown-item .countdown-number {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-size: 10vw;
+  padding-bottom: 1vw;
+  line-height: 3.641vw;
+}
+main .main-date-countdown .countdown-container .countdown-item .countdown-number-type {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-size: 4.1vw;
+}
+main .main-date-countdown .countdown-container .countdown-last-item {
+  border-right: none;
+  padding-right: 0;
+}
+main .main-ceremony-reception-information {
+  margin: 9.7vw 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10vw;
+}
+@media screen and (min-width: 769px) {
+  main .main-ceremony-reception-information {
+    display: none;
+  }
+}
+main .main-ceremony-reception-information .ceremony-reception-information {
+  width: 73%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 6vw;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .ceremony-reception-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .ceremony-reception-title img {
+  width: 16vw;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .ceremony-reception-title h2 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 6.2vw;
+  text-align: center;
+  line-height: 4.854vw;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .ceremony-reception-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5vw;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .ceremony-reception-content .ceremony-reception-hour {
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  color: #3A3A3A;
+  font-size: 5.34vw;
+  text-align: center;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .ceremony-reception-content .ceremony-reception-place {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: 5.2vw;
+  text-align: center;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .ceremony-reception-content .ceremony-reception-direction {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.34vw;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .reception-ceremony-button {
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 5.34vw;
+  text-align: center;
+  padding: 4.369vw 6.068vw;
+  background-color: #68524B;
+  border-radius: 8vw;
+  box-shadow: 0.3vw 0.3vw 0.5vw 0.01vw #bbbbbb;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+}
+main .main-ceremony-reception-information .ceremony-reception-information .reception-ceremony-button.hover {
+  background-color: #553A3A;
+  box-shadow: inset -3.155vw 5.825vw 3.155vw -4.126vw rgba(32, 21, 21, 0.55);
+}
+main .main-itinerary {
+  padding: 0 12%;
+  width: 100%;
+  background-color: #F4EDE7;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 1.5vw;
+  grid-template-areas: "title title title" "left center right";
+  box-sizing: border-box;
+  padding-top: 9.7vw;
+  padding-bottom: 9.7vw;
+}
+@media screen and (min-width: 769px) {
+  main .main-itinerary {
+    display: none;
+  }
+}
+main .main-itinerary h2 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 6.2vw;
+  text-align: center;
+  line-height: 4.854vw;
+  padding-bottom: 7vw;
+  grid-area: title;
+}
+main .main-itinerary .itinerary-tree-left-items {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vw;
+}
+main .main-itinerary .itinerary-tree-structure {
+  grid-area: center;
+}
+main .main-itinerary .itinerary-tree-right-items {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 17.5vw;
+  gap: 8vw;
+}
+main .main-itinerary .itinerary-tree-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main-itinerary .itinerary-tree-item img {
+  width: 11.408vw;
+}
+main .main-itinerary .itinerary-tree-item h4 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: 5.2vw;
+  text-align: center;
+}
+main .main-itinerary .itinerary-tree-item p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.34vw;
+}
+main .main-rsvp {
+  margin: 9.7vw 0 8.2vw 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 769px) {
+  main .main-rsvp {
+    display: none;
+  }
+}
+main .main-rsvp .rsvp-content {
+  margin-bottom: 9.7vw;
+  width: 73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+}
+main .main-rsvp .rsvp-content p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: #3A3A3A;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.583vw;
+}
+main .main-rsvp .rsvp-content .confirm-attendance-button {
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 5.34vw;
+  text-align: center;
+  padding: 4.369vw 6.068vw;
+  background-color: #68524B;
+  border-radius: 8vw;
+  box-shadow: 0.3vw 0.3vw 0.5vw 0.01vw #bbbbbb;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+main .main-rsvp .rsvp-content .confirm-attendance-button.hover {
+  background-color: #553A3A;
+  box-shadow: inset -3.155vw 5.825vw 3.155vw -4.126vw rgba(32, 21, 21, 0.55);
+}
+main .main-rsvp .rsvp-content .confirm-attendance-button img {
+  width: 5.583vw;
+}
+main .main-rsvp .rsvp-content .confirm-attendance-button p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 5.34vw;
+  text-align: center;
+}
+main .main-rsvp hr {
+  border: none;
+  width: 50%;
+  height: 1.4px;
+  background-color: #B4B4B4;
+  box-shadow: none;
+}
+main .main-dresscode {
+  margin-bottom: 9.7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9.7vw;
+}
+@media screen and (min-width: 769px) {
+  main .main-dresscode {
+    display: none;
+  }
+}
+main .main-dresscode h2 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 6.2vw;
+  text-align: center;
+  line-height: 4.854vw;
+}
+main .main-dresscode .women-men-dresscode {
+  width: 73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main-dresscode .women-men-dresscode img {
+  width: 6.5vw;
+  margin-bottom: 4vw;
+}
+main .main-dresscode .women-men-dresscode h3 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  color: #3A3A3A;
+  font-size: 5.34vw;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+main .main-dresscode .women-men-dresscode p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.34vw;
+  width: 85%;
+}
+main .main-gifts {
+  width: 100%;
+  background-color: #68524B;
+  padding-top: 9.7vw;
+  padding-bottom: 9.7vw;
+}
+@media screen and (min-width: 769px) {
+  main .main-gifts {
+    display: none;
+  }
+}
+main .main-gifts .main-gifts-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main-gifts .main-gifts-description h2 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 6.2vw;
+  text-align: center;
+  line-height: 4.854vw;
+  margin-bottom: 8vw;
+  width: 73%;
+}
+main .main-gifts .main-gifts-description p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.34vw;
+  width: 73%;
+  margin-bottom: 7vw;
+}
+main .main-gifts .main-gifts-description .bank-details-button {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 5.34vw;
+  text-align: center;
+  padding: 4.369vw 6.068vw;
+  background-color: #68524B;
+  border: 2px solid #FFFFFF;
+  border-radius: 8vw;
+  cursor: pointer;
+  margin-bottom: 1vw;
+}
+main .main-gifts .main-gifts-description .bank-details-button.hover {
+  background-color: #553A3A;
+  box-shadow: inset -3.155vw 5.825vw 3.155vw -4.126vw rgba(32, 21, 21, 0.55);
+}
+main .main-gifts .main__bank-details-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 59, 59, 0.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+main .main-gifts .main__bank-details-modal .modal-content {
+  background-color: #FFFFFF;
+  padding: 10vw;
+  border-radius: 5vw;
+  width: 80%;
+  box-sizing: border-box;
+  position: relative;
+}
+main .main-gifts .main__bank-details-modal .modal-content .close {
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  font-family: #553A3A;
+  font-weight: 500;
+  color: #3A3A3A;
+  font-size: 5vw;
+  text-decoration: none;
+  cursor: pointer;
+}
+main .main-gifts .main__bank-details-modal .modal-content h2 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 6.2vw;
+  text-align: center;
+  line-height: 4.854vw;
+  padding: 6vw 0;
+}
+main .main-gifts .main__bank-details-modal .modal-content div {
+  margin: 4vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main-gifts .main__bank-details-modal .modal-content div h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.34vw;
+  margin-bottom: 1vw;
+}
+main .main-gifts .main__bank-details-modal .modal-content div p {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #3A3A3A;
+  font-size: 5.2vw;
+  text-align: center;
+}
+main .main-gifts .main__bank-details-modal.show {
+  display: flex;
+}
+main .main-wedding-memories {
+  width: 100%;
+  padding-top: 9.7vw;
+  padding-bottom: 9.7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 769px) {
+  main .main-wedding-memories {
+    display: none;
+  }
+}
+main .main-wedding-memories .hashtag-information {
+  width: 73%;
+}
+main .main-wedding-memories .hashtag-information h2 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #553A3A;
+  font-size: 6.2vw;
+  text-align: center;
+  line-height: 4.854vw;
+  margin-bottom: 5.5vw;
+}
+main .main-wedding-memories .hashtag-information p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: #3A3A3A;
+  font-size: 4.4vw;
+  text-align: center;
+  line-height: 5.583vw;
+  margin-bottom: 12vw;
+}
+main .main-wedding-memories .couple-photo-collage {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+}
+main .main-wedding-memories .couple-photo-collage .first-collage-photo {
+  width: 100%;
+}
+main .main-wedding-memories .couple-photo-collage .bottom-collage-photo {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  height: 73vw;
+}
+main .main-wedding-memories .couple-photo-collage .bottom-collage-photo img {
+  height: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  footer {
+    display: none;
+  }
+}
+footer .footer {
+  background-color: #553A3A;
+  width: 100%;
+  height: 100%;
+}
+footer .footer h1 {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 7vw;
+  text-align: center;
+  padding-top: 9.7vw;
+}
+footer .footer h1 span {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 3.641vw;
+  text-align: center;
+}
+footer .footer h4 {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 5.2vw;
+  text-align: center;
+  font-size: 4.5vw;
+  padding-top: 1.5vw;
+  padding-bottom: 9.7vw;
+}/*# sourceMappingURL=main.css.map */

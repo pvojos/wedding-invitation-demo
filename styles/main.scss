@@ -1,0 +1,775 @@
+$mainColor: #553A3A;
+$secondColor: #68524B;
+$gradientLightColor: #876E67;
+$gradientDarkColor: #44322C;
+$textColor: #3A3A3A;
+$textLightColor: #FFFFFF;
+$detailsColor: #B4B4B4;
+$principalFont: "Cinzel", serif;
+$titlesFont: "Cormorant SC", serif;
+$contentFont: "Cormorant Garamond", serif;
+$signatureFont: "Great Vibes", serif;
+$emphasisFont: "Cormorant", serif;
+
+@mixin h1($color, $fontSize) {
+    font-family: $principalFont;
+    font-weight: 400;
+    color: $color;
+    font-size: $fontSize;
+    text-align: center;
+}
+
+@mixin h2($color) {
+    font-family: $titlesFont;
+    font-weight: 600;
+    color: $color;
+    font-size: 6.2vw;
+    text-align: center;
+    line-height: 4.854vw;
+}
+
+@mixin h3($color) {
+    font-family: $titlesFont;
+    font-weight: 700;
+    color: $color;
+    font-size: 5.34vw;
+    text-align: center;
+}
+
+@mixin h4($color) {
+    font-family: $titlesFont;
+    font-weight: 600;
+    color: $color;
+    font-size: 5.2vw;
+    text-align: center;
+}
+
+@mixin importantContent($color) {
+    font-family: $contentFont;
+    font-weight: 700;
+    color: $color;
+    font-size: 4.4vw;
+    text-align: center;
+    line-height: 5.583vw;
+}
+
+@mixin content($color) {
+    font-family: $contentFont;
+    font-weight: 600;
+    color: $color;
+    font-size: 4.4vw;
+    text-align: center;
+    line-height: 5.34vw;
+}
+
+@mixin normalButton {
+    font-family: $contentFont;
+    font-weight: 600;
+    color: $textLightColor;
+    font-size: 5.34vw;
+    text-align: center;
+    padding: 4.369vw 6.068vw;
+    background-color: $secondColor;
+    border-radius: 8vw;
+    box-shadow: 0.3vw 0.3vw 0.5vw 0.01vw #bbbbbb;
+}
+
+@mixin borderButton {
+    font-family: $contentFont;
+    font-weight: 600;
+    color: $textLightColor;
+    font-size: 5.34vw;
+    text-align: center;
+    padding: 4.369vw 6.068vw;
+    background-color: $secondColor;
+    border: 2px solid $textLightColor;
+    border-radius: 8vw;
+}
+
+@mixin hoverNormalButton {
+    background-color: $mainColor;
+    box-shadow: inset -3.155vw 5.825vw 3.155vw -4.126vw rgba(32, 21, 21, 0.55);
+}
+
+@mixin desktops {
+    @media screen and (min-width: 769px) { @content; }
+}
+
+@mixin phones {
+    @media screen and (max-width: 768px) { @content; }
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+header {
+    @include desktops {
+        display: none;
+    }
+
+    .header-title {
+        position: relative;
+        width: 100%;
+
+        .main-photo {
+            box-sizing: border-box;
+            width: 100%;
+            display: block;
+        }
+    
+        .main-photo-gradient-box {
+            position: absolute;
+            width: 100%;
+            height: 36.408vw;
+            left: 0;
+            bottom: 11.893vw;
+            background: linear-gradient(transparent, #FFFFFF);
+        }
+
+        .main-photo-solid-box {
+            width: 100%;
+            height: 12.136vw;
+            background: #FFFFFF;
+        }
+
+        .wedding-title {
+            position: absolute;
+            bottom: 3.641vw;
+            width: 100%;
+            text-align: center;
+            color: #FFFFFF;
+
+            .wedding-title-subtitle {
+                @include h4($mainColor);
+                margin-bottom: 1.214vw;
+            }
+
+            .couple-names {
+                @include h1($mainColor, 11.3vw);
+            }
+
+            .ampersand {
+                @include h1($mainColor, 5.9vw);
+            }
+        }
+    }
+
+    .header-phrase {
+        width: 73%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+
+        @include desktops {
+            display: none;
+        }
+
+        .phrase-content {
+            font-family: $emphasisFont;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 4.2vw;
+            color: $textColor;
+            margin: 4.854vw 0;
+            line-height: 5.583vw;
+        }
+
+        .phrase-autor {
+            font-family: $signatureFont;
+            font-size: 5.75vw;
+            color: $textColor;
+            margin: 2.4vw 0 7.2vw 0;
+        }
+    }
+
+    hr {
+        border: none;
+        width: 50%;
+        height: 1.4px;
+        background-color: $detailsColor;
+        box-shadow: none;
+
+        @include desktops {
+            display: none;
+        }
+    }
+}
+
+main {
+    .desktop-view {
+        background-color: #ddd0cd;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+
+        @include phones {
+            display: none;
+        }
+
+        .wedding-title-desktop {
+            text-align: center;
+            color: #FFFFFF;
+
+            .wedding-title-subtitle {
+                font-family: $titlesFont;
+                font-weight: 600;
+                color: $mainColor;
+                font-size: 2vw;
+                text-align: center;
+                margin-bottom: 1vw;
+            }
+
+            .couple-names {
+                @include h1($mainColor, 5vw);
+            }
+
+            .ampersand {
+                @include h1($mainColor, 2vw);
+            }
+        }
+
+        .movil-instruction {
+            p {
+                font-family: $contentFont;
+                font-weight: 600;
+                color: $textColor;
+                font-size: clamp(1rem, 1.6vw, 1.7rem);
+                text-align: center;
+            }
+        }
+
+        .qr-movil-link {
+            div {
+                width: clamp(6rem, 10vw, 12rem);
+                height: clamp(6rem, 10vw, 12rem);
+                background: #3A3A3A;
+            }
+        }
+    }
+
+    .main-parents {
+        width: 73%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 9.7vw;
+        margin-bottom: 9.7vw;
+
+        @include desktops {
+            display: none;
+        }
+
+        h2 {
+            @include h2($mainColor)
+        }
+
+        .main-parents-content {
+            @include importantContent($textColor);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 6.796vw;
+        }
+    }
+
+    .main-date-countdown {
+        width: 100%;
+        background: linear-gradient(45deg, $gradientLightColor, $gradientDarkColor);
+        box-shadow: inset -3.155vw 5.825vw 3.155vw -4.126vw rgba(32, 21, 21, 0.55);
+        padding-top: 8vw;
+        padding-bottom: 8vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6vw;
+
+        @include desktops {
+            display: none;
+        }
+
+        .date-container {
+            width: 73%;
+            text-align: center;
+            @include content($textLightColor);
+
+            .wedding-date {
+                font-family: $titlesFont;
+                font-size: 7.2vw;
+                line-height: 7.282vw;
+            }
+        }
+
+        .countdown-title {
+            width: 73%;
+            text-align: center;
+            @include content($textLightColor);
+
+            &.finish {
+                font-family: $contentFont;
+                font-weight: 600;
+                font-size: 7vw;
+                line-height: 4vw;
+                padding-bottom: 1vw;
+            }
+        }
+
+        .countdown-container {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 3.398vw;
+
+            .countdown-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: $textLightColor;
+                gap: 3.641vw;
+                border-right: 2px solid $detailsColor;
+                padding-right: 3.641vw;
+
+                .countdown-number {
+                    font-family: $titlesFont;
+                    font-weight: 600;
+                    font-size: 10vw;
+                    padding-bottom: 1vw;
+                    line-height: 3.641vw;
+                }
+
+                .countdown-number-type {
+                    font-family: $titlesFont;
+                    font-weight: 600;
+                    font-size: 4.1vw;
+                }
+            }
+
+            .countdown-last-item {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .main-ceremony-reception-information {
+        margin: 9.7vw 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10vw;
+
+        @include desktops {
+            display: none;
+        }
+
+        .ceremony-reception-information {
+            width: 73%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 6vw;
+
+            .ceremony-reception-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap:2vw;
+
+                img {
+                    width: 16vw;
+                }
+
+                h2 {
+                    @include h2($mainColor)
+                }
+            }
+
+            .ceremony-reception-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap:2.5vw;
+
+                .ceremony-reception-hour {
+                    @include h3($textColor);
+                }
+
+                .ceremony-reception-place {
+                    @include h4($textColor);
+                }
+
+                .ceremony-reception-direction {
+                    @include content($textColor);
+                }
+            }
+
+            .reception-ceremony-button {
+                text-decoration: none;
+                @include normalButton;
+                width: fit-content;
+                align-self: center;
+
+                &.hover {
+                    @include hoverNormalButton;
+                }
+            }
+        }
+    }
+
+    .main-itinerary {
+        padding: 0 12%;
+        width: 100%;
+        background-color: #F4EDE7;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: auto auto;
+        gap: 1.5vw;
+        grid-template-areas: 
+            "title title title"
+            "left center right";
+        box-sizing: border-box;
+        padding-top: 9.7vw;
+        padding-bottom: 9.7vw;
+
+        @include desktops {
+            display: none;
+        }
+
+        h2 {
+            @include h2($mainColor);
+            padding-bottom: 7vw;
+            grid-area: title;
+        }
+
+        .itinerary-tree-left-items {
+            grid-area: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10vw;
+        }
+
+        .itinerary-tree-structure {
+            grid-area: center;
+        }
+
+        .itinerary-tree-right-items {
+            grid-area: right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 17.5vw;
+            gap: 8vw;
+        }
+
+        .itinerary-tree-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 11.408vw;
+            }
+
+            h4 {
+                @include h4($textColor);
+            }
+
+            p {
+                @include content($textColor);
+            }
+        }
+    }
+
+    .main-rsvp {
+        margin: 9.7vw 0 8.2vw 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktops {
+            display: none;
+        }
+
+        .rsvp-content {
+            margin-bottom: 9.7vw;
+            width: 73%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5vw;
+
+            p {
+                @include importantContent($textColor);
+            }
+
+            .confirm-attendance-button {
+                text-decoration: none;
+                @include normalButton;
+                width: fit-content;
+                display: flex;
+                flex-direction: row;
+                gap: 2vw;
+
+                &.hover {
+                    @include hoverNormalButton;
+                }
+                
+
+                img {
+                    width: 5.583vw;
+                }
+
+                p {
+                    font-family: $contentFont;
+                    font-weight: 600;
+                    color: $textLightColor;
+                    font-size: 5.34vw;
+                    text-align: center;
+                }
+            }
+        }
+
+        hr {
+            border: none;
+            width: 50%;
+            height: 1.4px;
+            background-color: $detailsColor;
+            box-shadow: none; 
+        }
+    }
+
+    .main-dresscode {
+        margin-bottom: 9.7vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9.7vw;
+
+        @include desktops {
+            display: none;
+        }
+
+        h2 {
+            @include h2($mainColor);
+        }
+
+        .women-men-dresscode {
+            width: 73%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 6.5vw;
+                margin-bottom: 4vw;
+            }
+
+            h3 {
+                @include h3($textColor);
+                margin-bottom: 2vw;
+            }
+
+            p {
+                @include content($textColor);
+                width: 85%;
+            }
+        }
+    }
+
+    .main-gifts {
+        width: 100%;
+        background-color: $secondColor;
+        padding-top: 9.7vw;
+        padding-bottom: 9.7vw;
+
+        @include desktops {
+            display: none;
+        }
+
+        .main-gifts-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                @include h2($textLightColor);
+                margin-bottom: 8vw;
+                width: 73%;
+            }
+
+            p {
+                @include content($textLightColor);
+                width: 73%;
+                margin-bottom: 7vw;
+            }
+
+            .bank-details-button {
+                @include borderButton;
+                cursor: pointer;
+                margin-bottom: 1vw;
+
+                &.hover {
+                    @include hoverNormalButton;
+                }
+            }
+        }
+
+        .main__bank-details-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(71, 59, 59, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+
+            .modal-content {
+                background-color: $textLightColor;
+                padding: 10vw;
+                border-radius: 5vw;
+                width: 80%;
+                box-sizing: border-box;
+                position: relative;
+
+                .close {
+                    position: absolute;
+                    top: 5vw;
+                    right: 5vw;
+                    font-family: $mainColor;
+                    font-weight: 500;
+                    color: $textColor;
+                    font-size: 5vw;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                h2 {
+                    @include h2($mainColor);
+                    padding: 6vw 0;
+                }
+
+                div {
+                    margin: 4vw 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h4 {
+                        @include content($textColor);
+                        margin-bottom: 1vw;
+                    }
+
+                    p {
+                        @include h4($textColor);
+                    }
+                }
+            }
+
+            &.show {
+                display: flex;
+            }
+        }
+    }
+
+    .main-wedding-memories {
+        width: 100%;
+        padding-top: 9.7vw;
+        padding-bottom: 9.7vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktops {
+            display: none;
+        }
+
+        .hashtag-information {
+            width: 73%;
+            
+            h2 {
+                @include h2($mainColor);
+                margin-bottom: 5.5vw;
+            }
+
+            p {
+                @include importantContent($textColor);
+                margin-bottom: 12vw;
+            }
+        }
+
+        .couple-photo-collage {
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5vw;
+
+            .first-collage-photo {
+                width: 100%;
+            }
+
+            .bottom-collage-photo {
+                display: flex;
+                flex-direction: row;
+                gap: 5vw;
+                height: 73vw;
+
+                img {
+                    height: 100%;
+                }
+            } 
+        }
+    }
+}
+
+footer {
+    @include desktops {
+        display: none;
+    }
+
+    .footer {
+        background-color: $mainColor;
+        width: 100%;
+        height: 100%;
+        
+        h1 {
+            @include h1($textLightColor, 7vw);
+            padding-top: 9.7vw;
+
+            span {
+                @include h1($textLightColor, 3.641vw);
+            }
+        }
+
+        h4 {
+            @include h4($textLightColor);
+            font-size: 4.5vw;
+            padding-top: 1.5vw;
+            padding-bottom: 9.7vw;
+        }
+    }
+}
